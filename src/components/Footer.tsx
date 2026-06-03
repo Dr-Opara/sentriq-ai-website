@@ -13,12 +13,10 @@ export default function Footer() {
           <div>
             <p className="text-sm font-semibold text-slate-950">Solutions</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              <li><a href="#about" className="transition hover:text-slate-950">AI Agents</a></li>
-              <li><a href="#stories" className="transition hover:text-slate-950">Cybersecurity</a></li>
-              <li><a href="#difference" className="transition hover:text-slate-950">AI Security & Governance</a></li>
-              <li><a href="#about" className="transition hover:text-slate-950">Healthcare</a></li>
-              <li><a href="#stories" className="transition hover:text-slate-950">Legal</a></li>
-              <li><a href="#final-cta" className="transition hover:text-slate-950">Contact</a></li>
+              <li><a href="/services" className="transition hover:text-slate-950">Services</a></li>
+              <li><a href="/industries" className="transition hover:text-slate-950">Industries</a></li>
+              <li><a href="/about" className="transition hover:text-slate-950">About</a></li>
+              <li><a href="/contact" className="transition hover:text-slate-950">Contact</a></li>
             </ul>
           </div>
           <div>

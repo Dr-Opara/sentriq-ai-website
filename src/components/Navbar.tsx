@@ -12,14 +12,17 @@ export default function Navbar() {
         </div>
 
         <nav className="hidden items-center gap-3 text-sm md:flex">
-          <a href="#about" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
-            About Us
+          <a href="/services" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
+            Services
           </a>
-          <a href="#stories" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
-            Success Stories
+          <a href="/industries" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
+            Industries
           </a>
-          <a href="#final-cta" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
-            Build My Agent
+          <a href="/about" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
+            About
+          </a>
+          <a href="/contact" className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-500 hover:text-white">
+            Contact
           </a>
         </nav>
       </div>
