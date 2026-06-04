@@ -139,6 +139,28 @@ export default function ContactPage() {
                 </a>
               </div>
 
+              <div className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6">
+                <p className="text-base font-semibold text-slate-950">Follow</p>
+                <div className="space-y-2 text-sm text-slate-600">
+                  <a
+                    href="https://x.com/SentriqAI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-slate-950"
+                  >
+                    X @SentriqAI
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/sentriq-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-slate-950"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+
               <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <p className="text-base font-semibold text-slate-950">Response time</p>
                 <p className="mt-3 text-base leading-7 text-slate-600">We typically respond within 1–2 business days.</p>
