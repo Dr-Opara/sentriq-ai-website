@@ -83,17 +83,17 @@ export default function IndustriesPage() {
             {industries.map((industry) => (
               <div key={industry.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
                 <div className="flex flex-wrap items-center gap-4">
-                  <p className="text-xl font-semibold text-slate-950">{industry.title}</p>
+                  <p className="text-2xl font-semibold text-slate-950">{industry.title}</p>
                   <span className="rounded-full border border-sky-200 bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-sky-700">
                     Industry Focus
                   </span>
                 </div>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{industry.description}</p>
+                <p className="mt-4 text-base leading-8 text-slate-600">{industry.description}</p>
 
                 <div className="mt-8 grid gap-6 lg:grid-cols-3">
                   <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Challenges</p>
-                    <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
+                    <p className="text-base font-semibold uppercase tracking-[0.3em] text-sky-600">Challenges</p>
+                    <ul className="mt-4 space-y-3 text-base leading-8 text-slate-700">
                       {industry.challenges.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-600" />
@@ -104,8 +104,8 @@ export default function IndustriesPage() {
                   </div>
 
                   <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">SentriQ AI solutions</p>
-                    <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
+                    <p className="text-base font-semibold uppercase tracking-[0.3em] text-slate-600">SentriQ AI solutions</p>
+                    <ul className="mt-4 space-y-3 text-base leading-8 text-slate-700">
                       {industry.solutions.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-600" />
@@ -116,11 +116,11 @@ export default function IndustriesPage() {
                   </div>
 
                   <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">Outcomes</p>
-                    <p className="mt-4 text-sm leading-7 text-slate-700">{industry.outcome}</p>
+                    <p className="text-base font-semibold uppercase tracking-[0.3em] text-slate-600">Outcomes</p>
+                    <p className="mt-4 text-base leading-8 text-slate-700">{industry.outcome}</p>
                     <a
                       href="/contact"
-                      className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-500"
+                      className="mt-6 inline-flex rounded-full bg-sky-600 px-5 py-3 text-base font-semibold text-white transition hover:bg-sky-500"
                     >
                       Talk to Us
                     </a>

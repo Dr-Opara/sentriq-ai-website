@@ -6,7 +6,7 @@ export default function Navbar() {
           <p className="text-2xl font-bold uppercase tracking-[0.24em] text-slate-950">Sentriq <span className="text-sky-600">AI</span></p>
         </a>
 
-        <nav className="hidden items-center gap-5 text-sm md:flex">
+        <nav className="hidden items-center gap-5 text-base md:flex">
           <a href="/services" className="rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-950 transition hover:border-sky-500 hover:bg-sky-500 hover:text-white">
             Services
           </a>

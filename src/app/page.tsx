@@ -78,14 +78,14 @@ export default function Home() {
 
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-slate-600">Build the AI agent you need</p>
-            <h1 className="mt-8 text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
+            <p className="text-base font-semibold uppercase tracking-[0.32em] text-slate-600">Build the AI agent you need</p>
+            <h1 className="mt-8 text-4xl font-semibold tracking-tight text-slate-950 sm:text-[4.75rem] md:text-[5.5rem]">
               Describe the AI Agent you need.
             </h1>
-            <p className="mt-3 text-5xl font-semibold tracking-tight text-sky-600 sm:text-5xl">
-              We’ll build, secure, and manage it for you.
+            <p className="mt-3 text-[3rem] font-semibold tracking-tight text-sky-600 sm:text-[4.25rem] md:text-[4.8rem]">
+              We’ll build, test, deploy, secure, and manage it for you.
             </p>
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-slate-600 sm:text-2xl">
               Production-grade AI agents built around your business, with cybersecurity and governance built in.
             </p>
 
@@ -94,11 +94,11 @@ export default function Home() {
                 <input
                   type="text"
                   placeholder="Create an AI agent that manages patient intake, schedules appointments, and answers routine questions."
-                  className="min-w-0 flex-1 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-100"
+                  className="min-w-0 flex-1 rounded-full border border-slate-200 bg-white px-6 py-4 text-base text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-100"
                 />
                 <button
                   type="button"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg shadow-sky-500/20 transition hover:bg-sky-500"
+                  className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg shadow-sky-500/20 transition hover:bg-sky-500"
                   aria-label="Submit agent request"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
@@ -108,7 +108,7 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="mt-6 text-left text-sm text-slate-500 sm:text-center">
+              <div className="mt-6 text-left text-base text-slate-500 sm:text-center">
                 <span className="font-semibold text-slate-900">Not sure where to start?</span> Explore AI Agents for:
               </div>
 
@@ -116,7 +116,7 @@ export default function Home() {
                 {categories.map((category) => (
                   <button
                     key={category}
-                    className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:border-sky-400 hover:bg-sky-600 hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-5 py-3 text-base font-semibold text-slate-950 transition hover:border-sky-400 hover:bg-sky-600 hover:text-white"
                     type="button"
                   >
                     <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sky-600" />
@@ -140,7 +140,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {stackLabels.map((label) => (
-              <div key={label} className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-center text-sm font-semibold text-slate-700 shadow-sm">
+              <div key={label} className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-5 text-center text-base font-semibold text-slate-700 shadow-sm">
                 {label}
               </div>
             ))}
@@ -160,8 +160,8 @@ export default function Home() {
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {engagementModels.map((model) => (
               <div key={model.title} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <h3 className="text-xl font-semibold text-slate-950">{model.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{model.description}</p>
+                <h3 className="text-2xl font-semibold text-slate-950">{model.title}</h3>
+                <p className="mt-4 text-base leading-8 text-slate-600">{model.description}</p>
               </div>
             ))}
           </div>
@@ -172,19 +172,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-sky-400">Describe your agent.</p>
-              <h2 className="mt-6 text-4xl font-semibold tracking-tight text-sky-500 sm:text-5xl">
+              <p className="text-base font-semibold uppercase tracking-[0.32em] text-sky-400">Describe your agent.</p>
+              <h2 className="mt-6 text-4xl font-semibold tracking-tight text-sky-500 sm:text-[4.5rem]">
                 Describe your agent.
               </h2>
-              <p className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <p className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-[4.5rem]">
                 We’ll bring it to life.
               </p>
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-300">
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
                 We build custom AI agents that automate your workflows with security, governance, and human oversight.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <div className="flex-1 rounded-full border border-slate-700 bg-slate-900/90 px-5 py-4 text-sm text-slate-200 shadow-sm">
+                <div className="flex-1 rounded-full border border-slate-700 bg-slate-900/90 px-5 py-4 text-base text-slate-200 shadow-sm">
                   Build an AI agent that resolves customer inquiries 24/7
                 </div>
                 <button
@@ -205,11 +205,11 @@ export default function Home() {
               <div className="absolute right-10 bottom-10 h-24 w-24 rounded-full bg-sky-500/10 blur-2xl" />
               <div className="relative flex h-60 w-60 flex-col items-center justify-center gap-4 rounded-[2rem] bg-slate-950 px-6 py-8 text-center shadow-inner shadow-slate-950/40">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-sky-500/20 text-sky-400 ring-1 ring-sky-500/30">
-                  <span className="text-3xl">🤖</span>
+                  <span className="text-4xl">🤖</span>
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-white">AI agent studio</p>
-                  <p className="mt-3 text-sm leading-6 text-slate-400">A clean production-ready command center for your custom agent.</p>
+                  <p className="text-xl font-semibold text-white">AI agent studio</p>
+                  <p className="mt-3 text-base leading-7 text-slate-400">A clean production-ready command center for your custom agent.</p>
                 </div>
               </div>
             </div>
@@ -232,8 +232,8 @@ export default function Home() {
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-600">
                   <span className="text-lg font-semibold">✓</span>
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-slate-950">{card.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{card.description}</p>
+                <h3 className="mt-6 text-2xl font-semibold text-slate-950">{card.title}</h3>
+                <p className="mt-4 text-base leading-8 text-slate-600">{card.description}</p>
               </div>
             ))}
           </div>
@@ -254,14 +254,14 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-sky-600">Data security built into every Agent</p>
+              <p className="text-base font-semibold uppercase tracking-[0.32em] text-sky-600">Data security built into every Agent</p>
               <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
                 Data security built into every Agent
               </h2>
               <div className="mt-8 grid gap-4">
                 {securityHighlights.map((item) => (
                   <div key={item} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <p className="text-sm font-semibold text-slate-950">{item}</p>
+                    <p className="text-base font-semibold text-slate-950">{item}</p>
                   </div>
                 ))}
               </div>
@@ -277,7 +277,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl rounded-[2.5rem] border border-slate-800 bg-slate-950/95 p-10 shadow-2xl shadow-slate-900/40">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-sky-400">Ready for the next step?</p>
+              <p className="text-base font-semibold uppercase tracking-[0.32em] text-sky-400">Ready for the next step?</p>
               <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
                 Ready to move from AI experiments to <span className="text-sky-500">managed AI Agents</span>?
               </h2>
@@ -287,10 +287,10 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-end">
-              <a href="#home" className="inline-flex items-center justify-center rounded-full border border-sky-500 bg-slate-950 px-6 py-4 text-sm font-semibold text-sky-500 transition hover:bg-sky-500/10 hover:text-white">
+              <a href="#home" className="inline-flex items-center justify-center rounded-full border border-sky-500 bg-slate-950 px-6 py-4 text-base font-semibold text-sky-500 transition hover:bg-sky-500/10 hover:text-white">
                 Build My AI Agent
               </a>
-              <a href="#about" className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-4 text-sm font-semibold text-white transition hover:bg-sky-400">
+              <a href="#about" className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-sky-400">
                 Book a Call
               </a>
             </div>

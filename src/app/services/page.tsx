@@ -68,13 +68,13 @@ export default function ServicesPage() {
           <div className="mt-14 grid gap-8">
             {serviceSections.map((section) => (
               <div key={section.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
-                <h2 className="text-3xl font-semibold text-slate-950">{section.title}</h2>
-                <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">{section.description}</p>
+                <h2 className="text-4xl font-semibold text-slate-950">{section.title}</h2>
+                <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">{section.description}</p>
 
                 <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Capabilities</p>
-                    <ul className="mt-4 grid gap-2 text-sm leading-7 text-slate-700 sm:grid-cols-2">
+                    <p className="text-base font-semibold uppercase tracking-[0.3em] text-sky-600">Capabilities</p>
+                    <ul className="mt-4 grid gap-3 text-base leading-8 text-slate-700 sm:grid-cols-2">
                       {section.capabilities.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-600" />
@@ -85,11 +85,11 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-950">Business outcomes</p>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">{section.outcome}</p>
+                    <p className="text-base font-semibold uppercase tracking-[0.3em] text-slate-950">Business outcomes</p>
+                    <p className="mt-4 text-base leading-8 text-slate-600">{section.outcome}</p>
                     <a
                       href="/contact"
-                      className="mt-8 inline-flex rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-500"
+                      className="mt-8 inline-flex rounded-full bg-sky-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-500"
                     >
                       Contact Us
                     </a>
