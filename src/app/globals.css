@@ -32,3 +32,19 @@ button {
   background: #7dd3fc;
   color: #0f172a;
 }
+
+@keyframes tech-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-marquee {
+  animation: tech-marquee 28s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}

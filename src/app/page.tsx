@@ -2,6 +2,7 @@ import AgentCard from '../components/AgentCard';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import SectionHeading from '../components/SectionHeading';
+import TechStackMarquee from '../components/TechStackMarquee';
 
 const categories = [
   'Healthcare',
@@ -134,19 +135,19 @@ export default function Home() {
 
       <section id="about" className="bg-white px-6 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Custom integrations"
-            title="Custom-made agents on the systems you already run"
-            description="We build AI solutions that connect to your existing tools, platforms, and enterprise operations."
-            alignCenter={true}
-          />
+          <div className="text-center">
+            <p className="text-base font-semibold uppercase tracking-[0.32em] text-sky-500">Custom integrations</p>
+            <h2 className="mx-auto mt-6 max-w-3xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-[3.25rem]">
+              <span className="block">Custom-made agents on</span>
+              <span className="block">the stack you already run</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+              We build AI solutions that connect to your existing tools, platforms, and enterprise operations.
+            </p>
+          </div>
 
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {stackLabels.map((label) => (
-              <div key={label} className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-5 text-center text-base font-semibold text-slate-700 shadow-sm">
-                {label}
-              </div>
-            ))}
+          <div className="mt-12">
+            <TechStackMarquee />
           </div>
         </div>
       </section>
