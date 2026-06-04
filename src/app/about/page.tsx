@@ -11,7 +11,7 @@ const differencePoints = [
   'AI + Cybersecurity Expertise',
   'Security-First Development',
   'Human-in-the-Loop Design',
-  'Healthcare and Legal Focus',
+  'Healthcare, Legal, and Real Estate Focus',
   'Built for Real Business Workflows',
 ];
 

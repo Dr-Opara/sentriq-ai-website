@@ -4,7 +4,7 @@ import SectionHeading from '../../components/SectionHeading';
 
 export const metadata = {
   title: 'Industries | SentriQ AI',
-  description: 'SentriQ AI builds secure AI agents for healthcare, legal, and small-to-mid-sized business industries.',
+  description: 'SentriQ AI builds secure AI agents for healthcare, legal, real estate, and small-to-mid-sized business industries.',
 };
 
 const industries = [
@@ -44,6 +44,24 @@ const industries = [
       'Internal knowledge assistants',
     ],
     outcome: 'More efficient legal workflows, improved client response, and secure support for sensitive practice data.',
+  },
+  {
+    title: 'Real Estate',
+    description: 'AI agents for property inquiries, lead qualification, showing requests, buyer and seller intake, investor communications, CRM follow-up, and workflow automation for agents, brokers, and developers.',
+    challenges: [
+      'High volume of inquiries',
+      'Slow lead qualification',
+      'Scheduling showings manually',
+      'Fragmented customer relationship workflows',
+    ],
+    solutions: [
+      'Property inquiry automation',
+      'Lead qualification and routing',
+      'Showing request coordination',
+      'Buyer and seller intake workflows',
+      'CRM follow-up automation',
+    ],
+    outcome: 'Faster response times, better lead conversion, and smoother operations for real estate agents, brokers, and development teams.',
   },
   {
     title: 'Small & Mid-Sized Businesses',
