@@ -224,12 +224,14 @@ export default function Home() {
 
       <section id="difference" className="bg-sky-50 px-6 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="The SentriQ AI difference"
-            title="The SentriQ AI difference"
-            description="A premium approach to agent design, security, governance, and ongoing managed operations."
-            alignCenter={true}
-          />
+          <div className="text-center">
+            <h2 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-[3.75rem]">
+              The SentriQ <span className="text-sky-500">AI</span> difference
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-slate-600">
+              A premium approach to agent design, security, governance, and ongoing managed operations.
+            </p>
+          </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-4">
             {differenceCards.map((card) => (
@@ -259,8 +261,7 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="text-base font-semibold uppercase tracking-[0.32em] text-sky-600">Data security built into every Agent</p>
-              <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
                 Data security built into every Agent
               </h2>
               <div className="mt-8 grid gap-4">
