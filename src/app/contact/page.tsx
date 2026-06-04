@@ -134,29 +134,40 @@ export default function ContactPage() {
 
               <div className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6">
                 <p className="text-base font-semibold text-slate-950">Email</p>
-                <a href="mailto:contact@sentriqai.com" className="text-base text-sky-600 hover:underline">
-                  contact@sentriqai.com
+                <a href="mailto:hello@getsentriq.ai" className="text-base text-sky-600 hover:underline">
+                  hello@getsentriq.ai
                 </a>
               </div>
 
               <div className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6">
                 <p className="text-base font-semibold text-slate-950">Follow</p>
-                <div className="space-y-2 text-sm text-slate-600">
+                <div className="space-y-3 text-sm text-slate-600">
                   <a
-                    href="https://x.com/SentriqAI"
+                    href="https://x.com/GetSentriqAI"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition hover:text-slate-950"
+                    className="block rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
                   >
-                    X @SentriqAI
+                    <span className="font-semibold text-slate-950">X / Twitter</span>
+                    <span className="block text-slate-600">@GetSentriqAI</span>
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/sentriq-ai"
+                    href="https://linkedin.com/company/sentriqai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition hover:text-slate-950"
+                    className="block rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
                   >
-                    LinkedIn
+                    <span className="font-semibold text-slate-950">LinkedIn</span>
+                    <span className="block text-slate-600">SentriQAI</span>
+                  </a>
+                  <a
+                    href="https://instagram.com/sentriqai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
+                  >
+                    <span className="font-semibold text-slate-950">Instagram</span>
+                    <span className="block text-slate-600">@sentriqai</span>
                   </a>
                 </div>
               </div>
