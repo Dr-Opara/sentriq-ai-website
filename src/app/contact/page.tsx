@@ -1,11 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import SectionHeading from '../../components/SectionHeading';
-
-export const metadata = {
-  title: 'Contact | SentriQ AI',
-  description: 'Tell SentriQ AI what you want to automate or secure and get help identifying the right AI agent, security, or governance solution.',
-};
 
 const serviceOptions = [
   'AI Agent Development',
@@ -16,7 +15,54 @@ const serviceOptions = [
   'Not Sure Yet',
 ];
 
+const initialForm = {
+  name: '',
+  email: '',
+  company: '',
+  industry: '',
+  serviceInterestedIn: serviceOptions[0],
+  message: '',
+};
+
 export default function ContactPage() {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const isFormValid = form.name.trim() && form.email.trim() && form.message.trim();
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('loading');
+    setStatusMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Unable to send message.');
+      }
+
+      setStatus('success');
+      setStatusMessage('Your message was sent successfully. We’ll follow up soon.');
+      setForm(initialForm);
+    } catch (error) {
+      setStatus('error');
+      setStatusMessage(error instanceof Error ? error.message : 'Submission failed. Please try again.');
+    }
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-950 selection:bg-cyan-200 selection:text-slate-950">
       <Navbar />
@@ -32,7 +78,7 @@ export default function ContactPage() {
 
           <div className="mt-14 grid gap-10 lg:grid-cols-[0.95fr_0.65fr]">
             <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-10 shadow-sm">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-base font-semibold text-slate-900">
                     Name
@@ -41,6 +87,8 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     type="text"
+                    value={form.name}
+                    onChange={handleChange}
                     placeholder="Your name"
                     className="mt-3 w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                   />
@@ -54,6 +102,8 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     type="email"
+                    value={form.email}
+                    onChange={handleChange}
                     placeholder="you@example.com"
                     className="mt-3 w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                   />
@@ -67,6 +117,8 @@ export default function ContactPage() {
                     id="company"
                     name="company"
                     type="text"
+                    value={form.company}
+                    onChange={handleChange}
                     placeholder="Company name"
                     className="mt-3 w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                   />
@@ -81,18 +133,22 @@ export default function ContactPage() {
                       id="industry"
                       name="industry"
                       type="text"
+                      value={form.industry}
+                      onChange={handleChange}
                       placeholder="Industry"
                       className="mt-3 w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-base font-semibold text-slate-900">
+                    <label htmlFor="serviceInterestedIn" className="block text-base font-semibold text-slate-900">
                       Service Interested In
                     </label>
                     <select
-                      id="service"
-                      name="service"
+                      id="serviceInterestedIn"
+                      name="serviceInterestedIn"
+                      value={form.serviceInterestedIn}
+                      onChange={handleChange}
                       className="mt-3 w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                     >
                       {serviceOptions.map((option) => (
@@ -112,16 +168,30 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={5}
+                    value={form.message}
+                    onChange={handleChange}
                     placeholder="Share your workflow, business challenge, or security need."
                     className="mt-3 w-full rounded-[1.75rem] border border-slate-200 bg-white px-5 py-4 text-base text-slate-900 outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                   />
                 </div>
 
+                {status === 'success' && (
+                  <div className="rounded-3xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+                    {statusMessage}
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="rounded-3xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                    {statusMessage}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-sky-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-sky-500"
+                  disabled={!isFormValid || status === 'loading'}
+                  className="inline-flex items-center justify-center rounded-full bg-sky-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
-                  Submit Inquiry
+                  {status === 'loading' ? 'Sending…' : 'Submit Inquiry'}
                 </button>
               </form>
             </div>
