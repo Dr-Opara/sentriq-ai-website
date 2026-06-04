@@ -85,6 +85,9 @@ export default function Home() {
             <p className="mt-3 text-[3rem] font-semibold tracking-tight text-sky-600 sm:text-[4.25rem] md:text-[4.8rem]">
               We’ll build, test, deploy, secure, and manage it for you.
             </p>
+            <p className="mx-auto mt-6 max-w-3xl text-lg font-semibold leading-8 text-slate-700 sm:text-xl">
+              Texas-Based <span className="text-sky-600">Agentic AI</span> Builder and <span className="text-sky-600">AI Security</span> Partner for Healthcare, Legal, and Growing Businesses.
+            </p>
             <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-slate-600 sm:text-2xl">
               Production-grade AI agents built around your business, with cybersecurity and governance built in.
             </p>
